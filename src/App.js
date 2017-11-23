@@ -3,13 +3,23 @@ import './App.css'
 import Automaton from './automaton/Automaton'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Automaton/>
-      </div>
-    );
-  }
+
+	constructor() {
+		super()
+		this.ruleset = [
+			'110',
+			'100',
+			'011',
+			'001'
+		]
+	}
+ 	render() {
+    	return (
+      		<div className="App">
+        		<Automaton ruleset={this.ruleset}/>
+      		</div>
+    	)
+  	}
 }
 
 export default App

@@ -1,19 +1,16 @@
 import React from 'react'
 import AutomatonDisplay from './AutomatonDisplay'
 import generateRows from './generateRows'
+import RuleSelector from './RuleSelector'
 
-const Automaton = () => {
-	const ruleset = [
-		'110',
-		'100',
-		'011',
-		'001'
-	]
-	const firstRow = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-	const cells = generateRows(200, firstRow, ruleset)
+const Automaton = ({ruleset, firstRow}) => {
+	firstRow = firstRow || randomizedRow(200);
+	let cells = generateRows(200, firstRow, ruleset)
+
 	return (
 		<div>
-			<AutomatonDisplay height='1000' width='1000' cells={cells}/>
+			<RuleSelector />
+			<AutomatonDisplay height={1000} width={1000} cells={cells}/>
 		</div>
 	)
 }
