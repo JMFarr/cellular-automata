@@ -4,10 +4,8 @@ import './AutomatonDisplay.css'
 
 
 class AutomatonDisplay extends Component {
-	constructor({height, width, cells}) {
-		super()
-		this.height = height
-		this.width = width
+	constructor({cells}) {
+		super()		
 		this.cells = cells
 	}
 	componentDidMount() {
@@ -15,7 +13,7 @@ class AutomatonDisplay extends Component {
 		renderCellsIntoCanvas(this.cells, canvas)
 	}	
 	render() {
-		return <canvas id="automatonDisplay" height={this.height} width={this.width}></canvas>
+		return <canvas id="automatonDisplay" height='1000' width='1000'></canvas>
 	}
 }
 
