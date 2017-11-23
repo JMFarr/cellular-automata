@@ -1,0 +1,14 @@
+.cell {
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	margin: 5px;
+}
+
+.active {
+	background-color: #000000;
+}
+
+.inactive {
+	background-color: #0099ff;
+}
