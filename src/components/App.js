@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Automaton from './automaton/Automaton'
+import Automaton from './Automaton'
 
 class App extends Component {
 
