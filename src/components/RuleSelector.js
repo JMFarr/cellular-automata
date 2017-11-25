@@ -17,14 +17,8 @@ class RuleSelector extends Component {
 	render() {
 		return (
 			<div>
-				<Rule previousCellStates={[1,1,1]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[1,1,0]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[1,0,1]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[1,0,0]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[0,1,1]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[0,1,0]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[0,0,1]} updateRuleset={this.updateRuleset}/>
-				<Rule previousCellStates={[0,0,0]} updateRuleset={this.updateRuleset}/>
+				<Rule ruleName='r101'/>
+				
 			</div>
 		)
 	}
