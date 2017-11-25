@@ -10,7 +10,7 @@ const Automaton = ({ruleset, firstRow}) => {
 	return (
 		<div>
 			<RuleSelector />
-			<AutomatonDisplay height={1000} width={1000} cells={cells}/>
+			<AutomatonDisplay cells={cells}/>
 		</div>
 	)
 }
