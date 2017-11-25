@@ -5,8 +5,7 @@ const ruleset = (state = {}, action) => {
 			nextState[action.ruleName] = !state[action.ruleName]
 			return nextState
 		case 'ADD_RULE':
-			let { rule } = action 
-			return { ...state, ...rule}
+			return { ...state, ...action.rule}
 		default:
 			return state
 	}
