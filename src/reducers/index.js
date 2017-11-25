@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import ruleset
+import ruleset from './ruleset'
 
 const rootReducer = combineReducers({
 	ruleset
