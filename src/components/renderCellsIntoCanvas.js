@@ -1,8 +1,9 @@
-export default function renderCellsIntoCanvas(cells, canvas) {
-	const cellSize = 5
-	const activeColor = "#000000"
-	const inactiveColor = "#0099ff"
-	const ctx = canvas.getContext("2d")
+const cellSize = 5
+const activeColor = "#000000"
+const inactiveColor = "#0099ff"
+
+const renderCellsIntoCanvas = (cells, ctx) => {	
+	ctx.clearRect(0,0,500,500)
 
 	for(let i = 0; i < cells.length; i++){
 		for(let j = 0; j < cells[i].length; j++){
@@ -14,3 +15,5 @@ export default function renderCellsIntoCanvas(cells, canvas) {
 		}	
 	}
 }
+
+export default renderCellsIntoCanvas

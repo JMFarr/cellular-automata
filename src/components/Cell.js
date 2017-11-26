@@ -6,10 +6,10 @@ const Cell = ({active}) => {
 		<div
 			style={{
 				backgroundColor: color,
-				margin: '8px',
+				margin: '5px',
 				padding: '0',
-				height: '30px',
-				width: '30px',
+				height: '20px',
+				width: '20px',
 				display: 'inline-block'
 			}}
 		>

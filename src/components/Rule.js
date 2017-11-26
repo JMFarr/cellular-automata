@@ -2,13 +2,17 @@ import React from 'react'
 import Cell from './Cell'
 
 const Rule = ({rule, toggleRule}) => {
-	let previousCells = rule.prev.map((active) => (
-		<Cell active={active} />
+	let previousCells = rule.prev.map((active, key) => (
+		<Cell key={key} active={active} />
 	))
 	return (
-		<div>
+		<div 
+			style={{
+				display: 'inline-block'
+			}}
+		>
 			{ previousCells }
-			<br />
+			
 			<div 
 				onClick={() => {
 					toggleRule(rule.id)
