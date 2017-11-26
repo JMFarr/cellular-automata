@@ -1,11 +1,11 @@
 import generateRows, { generateNextRow } from './generateRows'
+import createRuleset from '../createRuleset'
 
-const mockRuleset = [
-		'110',
-		'101',
-		'011',
-		'000'
-]
+const mockRuleset = createRuleset()
+mockRuleset[0].next = 1
+mockRuleset[3].next = 1
+mockRuleset[5].next = 1
+mockRuleset[6].next = 1
 
 it('creates the next row correctly', () => {
 	
