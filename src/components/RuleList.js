@@ -10,7 +10,10 @@ const RuleList = ({ruleset, toggleRule}) => {
 		/>
 	))
 	return (
-		<div>
+		<div
+			style={{
+			}}
+		>
 			{ rules }
 		</div>
 	)

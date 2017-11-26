@@ -8,14 +8,34 @@ const Rule = ({rule, toggleRule}) => {
 	return (
 		<div 
 			style={{
-				display: 'inline-block'
+				display: 'inline-block',
+				backgroundColor: '#777777',
+				margin: '8px',
+				padding: '6px',
+				borderRadius: '2px'
+
 			}}
 		>
 			{ previousCells }
-			
+			<hr />
+			<p
+				style={{
+					float: 'left',
+					lineHeight: '0px',
+					color: '#f4f4f4'
+				}}
+			>
+				Next:
+			</p>
 			<div 
 				onClick={() => {
 					toggleRule(rule.id)
+				}}
+				style={{
+					float: 'left',
+					margin: '0px',
+					padding: '0px',
+					maxHeight: '30px'
 				}}
 			>
 				<Cell active={rule.next} />

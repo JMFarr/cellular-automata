@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Cell = ({active}) => {
-	let color = active ? 'black' : 'blue' 
+	let color = active ? '#070707' : '#f4f4f4' 
 	return (
 		<div
 			style={{

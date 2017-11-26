@@ -1,6 +1,6 @@
 const cellSize = 5
-const activeColor = "#000000"
-const inactiveColor = "#0099ff"
+const activeColor = "#070707"
+const inactiveColor = "#F4F4F4"
 
 const renderCellsIntoCanvas = (cells, ctx) => {	
 	ctx.clearRect(0,0,500,500)
