@@ -1,13 +1,6 @@
-export const toggleRule = (ruleName) => {
+export const toggleRule = (id) => {
 	return {
 		type: "TOGGLE_RULE",
-		ruleName
-	}
-}
-
-export const addRule = (rule) => {
-	return {
-		type: "ADD_RULE",
-		rule
+		id
 	}
 }

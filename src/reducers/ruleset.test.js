@@ -1,43 +1,19 @@
 import ruleset from './ruleset'
-import deepfreeze from 'deep-freeze'
+import createRuleset from '../createRuleset'
 
 it('toggles a rule', () => {
-	let state = { 
-		r000: false, 
-		r101: false 
-	}
+	let state = createRuleset()
 	let action = { 
 		type: 'TOGGLE_RULE', 
-		ruleName: 'r101'
+		id: 5
 	}
-
-	state = deepfreeze(state)
 
 	let nextState = ruleset(state, action)
-	let expectedState = { 
-		r000: false, 
-		r101: true 
-	}
+	let expectedFifthRule = {
+		id: 5,
+		prev: [1,0,1],
+		next: 1
+	} 
 
-	expect(nextState).toEqual(expectedState)
-})
-
-it('adds a rule', () => {
-	let state = { r000: false }
-	let action = { 
-		type: 'ADD_RULE', 
-		rule: {
-			r101: true
-		}
-	}
-
-	state = deepfreeze(state)
-
-	let nextState = ruleset(state, action)
-	let expectedState = { 
-		r000: false, 
-		r101: true 
-	}
-
-	expect(nextState).toEqual(expectedState)
+	expect(nextState[5]).toEqual(expectedFifthRule)
 })

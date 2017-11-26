@@ -1,11 +1,9 @@
-const ruleset = (state = {}, action) => {
+const ruleset = (state = [], action) => {
 	switch(action.type) {
 		case 'TOGGLE_RULE':
-			let nextState = { ...state }
-			nextState[action.ruleName] = !state[action.ruleName]
+			let nextState = [ ...state ]
+			nextState[action.id].next = 1 - state[action.id].next
 			return nextState
-		case 'ADD_RULE':
-			return { ...state, ...action.rule}
 		default:
 			return state
 	}
